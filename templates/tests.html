@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if results %}
+{% for result in results %}
+<p> {{ result }} </p>
+{% endfor %}
+{% endif %}
+
+{% endblock %}

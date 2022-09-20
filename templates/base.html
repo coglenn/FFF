@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='nav.css')}}" />
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Big Dawgs Forum</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="nav.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <link rel="stylesheet" href="forum.css">
+    </head>
+    <body>
+      <nav class="nav">
+          <a href="{{ url_for('news') }}" class="nav__link">
+              <i class="material-icons">newspaper</i>
+              <span class="nav__text">NEWS</span>
+          </a>
+          <a href="{{ url_for('power') }}" class="nav__link nav__link--active">
+              <i class="material-icons">format_list_numbered</i>
+              <span class="nav__text">POWER</span>
+          </a>
+          <a href="{{ url_for('versus') }}" class="nav__link">
+              <i class="material-icons">sports_mma</i>
+              <span class="nav__text">VERSUS</span>
+          </a>
+          <a href="{{ url_for('forum') }}" class="nav__link">
+              <i class="material-icons">forum</i>
+              <span class="nav__text">FORUM</span>
+          </a>
+      </nav>
+
+
+      <div class="body-content">
+          {% block content %}
+          {% endblock %}
+          <hr/>
+          <footer>
+              <p>© BigDawgs</p>
+          </footer>
+      </div>
+  </body>
+</html>

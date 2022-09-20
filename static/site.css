@@ -1,0 +1,130 @@
+.typed-out1{
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.1rem;
+    width: 0;
+    animation: typing 5s forwards;
+    animation-delay: 1s;
+}
+
+.typed-out2{
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.1rem;
+    width: 0;
+    animation: typing 5s forwards;
+    animation-delay: 4s;
+}
+
+.typed-out3{
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.1rem;
+    width: 0;
+    animation: typing 5s forwards;
+    animation-delay: 7s;
+}
+
+.typed-out4{
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.1rem;
+    width: 0;
+    animation: typing 6s forwards;
+    animation-delay: 10s;
+}
+
+.typed-out5{
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 10px;
+    width: 0;
+    animation: typing 6s forwards;
+    animation-delay: 13s;
+}
+
+.container {
+    display: inline-block;
+    width: 100vw;
+
+  }
+
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+body {
+    background-color: rgb(3, 11, 0);
+    color: rgb(20, 181, 53);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+footer {
+    background-color: rgb(3, 11, 0);
+    color: rgb(20, 181, 53);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@keyframes opanimation  {
+    0% {
+       opacity:0;
+    }
+
+    100% {
+       opacity:1;
+    }
+}
+
+button.redpill {
+  background: #f05d5d;
+  border-radius: 999px;
+  box-shadow: #f05d5d 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #cf3939e8;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 0;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  animation:opanimation 6s forwards;
+  animation-delay: 15s;
+}
+
+button.bluepill {
+    background: #5d98f0;
+    border-radius: 999px;
+    box-shadow: #5d69f0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #3975cfb8;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 0;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+    animation:opanimation 6s forwards;
+    animation-delay: 15s;
+
+}
+
+#pills {
+    padding-top: 15px;
+    padding-left: 30px;
+}
