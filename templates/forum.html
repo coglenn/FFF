@@ -8,25 +8,37 @@
 
         <main>
             <div class="matchup" id="vsweek1">
-                <h4></h4>
+              <a href="{{ url_for('modal') }}" class="btn btn-outline-success">Post</a>
+                <h4>
+                <div class="content">
+                  <table border = 1>
+                     <thead>
+                       <td>Timestamp</td>
+                        <td>Title</td>
+                        <td>Post</td>
+                        <td>Edit Post</td>
+
+                     </thead>
+                  {% for message in messages %}
+                  <tr>
+                    <td>{{ message['created'] }}</td>
+                    <td class="content">{{ message["title"] }}</td>
+                    <td class="content">{{ message["content"] }}</td>
+                    <td> <a href="{{ url_for('edit', id=message['id']) }}">Edit</a></td>
+                  </tr>
+
+                  {% endfor %}
+
+                </div>
+              </h4>
+              <p>
                 <img src="https://pbs.twimg.com/profile_images/1377974253438562305/ftOl14Zv_400x400.png">
                 <p>
-                  <div class="content">
-                    <table border = 1>
-                       <thead>
-                          <td>Title</td>
-                          <td>Post</td>
 
-                       </thead>
-                    {% for message in messages %}
-                    <tr>
-                      <td class="content">{{ message["title"] }}</td>
-                      <td class="content">{{ message["content"] }}</td>
-                    </tr>
-                    {% endfor %}
-
-                  </div>
                 </p>
             </div>
         </main>
+
 {% endblock %}
+
+https://getbootstrap.com/docs/4.3/getting-started/introduction/
