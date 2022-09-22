@@ -1,3 +1,6 @@
 [submodule "espn-api"]
 	path = espn-api
 	url = https://github.com/cwendt94/espn-api
+[submodule "lib/FL"]
+	path = lib/FL
+	url = https://github.com/cwendt94/espn-api
