@@ -5,7 +5,7 @@ import json
 from datetime import datetime
 import re
 import sqlite3 as sql
-from espn_api.football import League
+from FL.espn_api.football import League
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'ac58573d616b02fe9c4d39dcad3686b8c263aae463286999'
