@@ -1,0 +1,31 @@
+header {
+    margin-left: 10px;
+    text-shadow: 1px 1px 3px#f6ff0096;
+}
+
+div.rankings {
+    margin-left: 20px;
+    margin-right: 10px;
+    border: inset;
+    border-color: rgb(20, 181, 53);
+    border-radius: 3px;
+    padding: 0 10px 0;
+    margin-top: 20px;
+    text-shadow: 1px 1px 3px#f6ff00ac;
+    box-shadow: 1px 1px 5px#f6ff00;
+}
+
+#dew{
+    max-width: 30vw;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+}
+
+#rankings{
+    max-width: 90vw;
+    display: block;
+    margin: auto;
+    box-shadow: 1px 1px 5px#f6ff00, -1px -1px 5px#9dff00;
+    border-radius: 10px;
+}
