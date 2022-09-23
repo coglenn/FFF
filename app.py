@@ -203,6 +203,8 @@ def tests():
     # soup = r.content
     # data = json.loads(soup)
     # teams_data = data.get('teams')
+    top = league.top_scored_week()
+    bottom = league.least_scored_week()
     teams_list = []
     clean_teams_list = []
     teams_data = league.standings()
@@ -216,7 +218,7 @@ def tests():
         clean_teams_list.append(clean_team)
 
     return render_template("tests.html",
-        results = clean_teams_list)
+        results = clean_teams_list, top = top, bottom = bottom)
 
 print(league.standings())
 

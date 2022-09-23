@@ -2,7 +2,7 @@
 
 {% block content %}
     <h1>{% block title %} Add a New Message {% endblock %}</h1>
-    <a href="{{ url_for('modal') }}" class="btn btn-outline-success">Post</a>
+    <!-- <a href="{{ url_for('modal') }}" class="btn btn-outline-success">Post</a> -->
     <form method="post">
         <label for="title">Title</label>
         <label for="content">Message Content</label>
@@ -29,7 +29,7 @@
 
         <br>
 
-        <button class="bluepill" class="typed-out6" role="button">Submit</button>
+        <button type="button" class="btn btn-primary">Submit</button>
     </form>
 
 {% endblock %}

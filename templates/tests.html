@@ -2,11 +2,19 @@
 
 {% block content %}
 
+<label for="content">Highest Point Scorer
+<ul> {{ top }} </ul>
+</label>
+<label for="content">lowest Point Scorer
+<ul> {{ bottom }} </ul>
+</label>
+<label for="content">Standings
 {% if results %}
 {% for result in results %}
 <tr>
 <ul> {{ result }} </ul>
 </tr>
+</label>
 {% endfor %}
 {% endif %}
 
