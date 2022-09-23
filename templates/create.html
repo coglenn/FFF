@@ -1,35 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Add a New Message {% endblock %}</h1>
-    <!-- <a href="{{ url_for('modal') }}" class="btn btn-outline-success">Post</a> -->
-    <form method="post">
-        <label for="title">Title</label>
-        <label for="content">Message Content</label>
-        <div class="content">
-          {% for message in get_flashed_messages() %}
-          <div class="alert">{{ message }}</div>
-          {% endfor %}
-
-        </div>
-        <br>
-        <input type="text" name="title"
-               placeholder="Message title"
-               value="{{ request.form['title'] }}"></input>
-        <br>
-
-
-        <br>
-        <textarea type="text" name="content"
-                  placeholder="Message content"
-                  rows="15"
-                  cols="60"
-                  >{{ request.form['content'] }}</textarea>
-
-
-        <br>
-
-        <button type="button" class="btn btn-primary">Submit</button>
-    </form>
+<h1>{% block title %} Add a New Message {% endblock %}</h1>
+<!-- <a href="{{ url_for('modal') }}" class="btn btn-outline-success">Post</a> -->
+<form method="post">
+    <label for="title">Title</label>
+    <label for="content">Message Content</label>
+    <div class="content">
+      {% for message in get_flashed_messages() %}
+      <div class="alert">{{ message }}</div>
+      {% endfor %}
+    </div>
+    <br>
+    <input type="text" name="title"placeholder="Message title" value="{{ request.form['title'] }}">
+    </input>
+    <br>
+    <br>
+    <textarea type="text" name="content"
+              placeholder="Message content"
+              rows="15"
+              cols="60"
+              >{{ request.form['content'] }}</textarea>
+    <br>
+    <button type="submit">Submit</button>
+</form>
 
 {% endblock %}
