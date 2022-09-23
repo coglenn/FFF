@@ -1,6 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Big Dawgs Forum</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="nav.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="forum.css">
+</head>
+
         <header>
             <h1>FORUM UNDER CONSTRUCTION</h1>
             <h3>Git up on outta here</h3>
@@ -8,7 +21,13 @@
 
         <main>
             <div class="matchup" id="vsweek1">
-              <a href="{{ url_for('modal') }}" class="btn btn-outline-success">Post</a>
+              <div id="" class="container">
+              <a href="{{ url_for('create') }}" >
+                <button type="button" class="btn btn-primary">
+                  Create Post
+                </button>
+              </a>
+              </div>
                 <h4>
                 <div class="content">
                   <table border = 1>

@@ -8,7 +8,11 @@ import sqlite3 as sql
 import espn_api
 from espn_api.football import League
 
+if __name__ == '__main__':
+   app.run(debug = True)
+
 app = Flask(__name__)
+
 app.config['SECRET_KEY'] = 'ac58573d616b02fe9c4d39dcad3686b8c263aae463286999'
 
 league = League(league_id=97146, year=2022, espn_s2='AEB4PJ3oWS4yfVSKCzUu0AJsP%2Bj3ZQerMqAB9EHH0u084yZ93xo%2Ft84cnx%2F%2B98ey3wZzuqR%2BfTGUoNIV%2F%2B0tXDbRprkKC10nH%2FWLjq42qIh9X8PJdnIDPpxr92fZHb5hGgDbhRaWPm539XY9EdhPjjurX1lkMW0KhAmT85d8B288%2F%2FeGJOqnqBzbSa%2FsMzExulGBqPd%2BtkgYokYjITMUgjx4DTysSfPgyq4BkfhYQLitgjiHjFK1ti1%2Fiw5p4vjx06SYK5mLMDedMpiKDaAIXeBf9WIdiTj7P6zlZtIQpxx3sQ%3D%3D', swid='{6AEFCD9B-20CB-42CA-ACF3-8D4EA9321264}')
@@ -180,6 +184,14 @@ def forum():
 def versus():
     return render_template("versus.html")
 
+# def least_scored_week(self) -> Tuple[Team, int]:
+#     least_week_points = []
+#     for team in self.teams:
+#         least_week_points.append(min(team.scores[:self.current_week]))
+#     least_scored_tup = [(i, j) for (i, j) in zip(self.teams, least_week_points)]
+#     least_tup = sorted(least_scored_tup, key=lambda tup: int(tup[1]), reverse=False)
+#     return least_tup[0]
+
 @app.route("/tests/",methods=("GET", "POST"), strict_slashes=False)
 def tests():
     # league_id = 97146
@@ -192,23 +204,27 @@ def tests():
     # data = json.loads(soup)
     # teams_data = data.get('teams')
     teams_list = []
-    teams_data = league.teams
+    clean_teams_list = []
+    teams_data = league.standings()
     for team in teams_data:
-        str = str(team)
-        beg = 5
-        end = 1
-        team = str[0:beg] + str[end:0]
-        # team = team.lstrip('Team')
         teams_list.append(team)
-
-        print(teams_list[4:])
+    for item in teams_list:
+        item = str(item)
+        clean_team1 = item.lstrip('Team')
+        clean_team2 = clean_team1.lstrip('(')
+        clean_team = clean_team2.rstrip(')')
+        clean_teams_list.append(clean_team)
 
     return render_template("tests.html",
-        results = teams_list)
+        results = clean_teams_list)
+
+print(league.standings())
 
 # for team in league.teams:
 #     print(team[1:])
-print(league.least_scored_week())
-print(league.box_scores(week=2))
+print(league.top_scored_week())
+print(league.scoreboard())
+print(league.box_scores())
+# print(league.box_scores(week=2))
 # print(league.power_rankings(week=3))
 # print(league.power_rankings(week=2))
