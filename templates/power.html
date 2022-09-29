@@ -1,64 +1,115 @@
-{% extends 'base.html' %}
-
-{% block content %}
-<header>
-      <h3>Commisioner Beard's </h3>
-      <img src="../static/RANKINGS.jpeg" id="rankings">
-  </header>
-  <main>
-      <div class="rankings" id="week3">
-          <p>Week 3:</p>
-             <ol>
-              <li>Teteo(up)- Teteo has crafted the dream squad. Take notes.</li><br>
-              <li>Bryan(up)- Consistent excellence. He just gets the job done.</li><br>
-              <li>Jake(up)- Coming back strong after a week one loss. Jake is building steam.</li><br>
-              <li>Colt(down)- A week 2 disappointment, but Colt has tasted the good life. He’ll be wanting more.
-              </li><br>
-              <li>Andrew- Did what it took to get the victory. But he can’t expect to do the same against a contender.</li><br>
-              <li>Sam(down)- Losing to the previous week’s shitlicker after a promising week one leads to a big demotion. *<br><br>*editors note, since the initial writing of the rankings Sam was able to barely win.</li><br>
-              <li>Zack(up) - A middling week, but a win all the same. We will need to see some improvement moving forward.</li><br>
-              <li>Kyler(down)- Disappointment after a string opening showing last week. Is there trouble in the house of the running back?</li><br>
-              <li>Jason(up)- The ass shaking gifs are back. But Josh Jacobs is not, thank god.</li><br>
-              <li>Ethan(up) - Any week under 100 is a massive blow to the ego and requires a hard look at the roster. Luckily for Ethan the league has no shortage of bottom dwellers to rise above.</li><br>
-              <li>Caleb(up)- Crowned “Worst Roster in The League” by popular opinion, Caleb did little to prove doubters wrong. Fortunately for him he was able to pull himself from the septic tank this week fashioning another teams bloated corpse below him as a sort of human life raft…</li><br>
-              <img src="../static/mtndew.png" id="dew"><h2>SHITTER OF THE WEEK</h2><br>
-              <li>Josh(down) - Really, really not great man. Two weeks in a row to open the new season with sub 90 point scoring. Not only that but doing so in the face of a true god-like opponent. Like if David and Goliath ended with Goliath using David’s skinned flesh as a doormat after shooting him in the face with a shotgun. I think the Bible would be cooler if that happened, but in this case Josh’s loss is pitiable. Get that trade machine up and running and be ready to lay down some fat FAAB stacks cuz this team needs a reset asap. </li><br>
-              </ol>
-      </div>
-      <div class="rankings" id="week2">
-          <p>Week 2:</p>
-             <ol>
-              <li>Sam(up)- Five QB interceptions and Two running back heroes equals WIN.</li><br>
-              <li>Colt(up)- Usually by this point colt has renounced religion and all hope.</li><br>
-              <li>Bryan(up)- A win is a win. Even if it's Caleb.</li><br>
-              <li>Kyler(up)- Second highest scorer, fourth in power rankings. Possible conspiracy against this maverick owner?</li><br>
-              <li>Andrew(up)- If this guy ever learns who to play off his bench we are all fucked.</li><br>
-              <li>Jake(up)- Two gods, one L.</li><br>
-              <li>Zack - Josh Allen can only do so much to try and save this self inflicted starter decision disaster.</li><br>
-              <li>Ethan(up)- Not last!</li><br>
-              <li>Teteo(down)- Teteo's first two picks may have been duds, but the entire Jets offense is ready to take this team to the next level.</li><br>
-              <li>Jason - It's the Pitts.</li><br>
-              <li>Josh(down)- Losing by one point is always a tragedy. Knowing that if you had started no one in the flex and you would have won? Enough to crush a man's soul.</li><br>
-              <img src="../static/mtndew.png" id="dew"><h2>SHITTER OF THE WEEK</h2><br>
-              <li>Caleb - 9 players, not even 80 points. You'd better be thanking your lucky stars that the Browns so happily employ human scum because without Kareem Hunt we would have tossed the season away and just assigned you last place punishment in week 1. Najee dead, Etienne already usurped by James Robinson, Prescott fucked, CeeDee bust, Kittle made of glass. Only one option left. Jamaal Williams SZN. </li><br>
-              </ol>
-      </div>
-      <div class="rankings" id="week1">
-          <p>Week 1:</p>
-             <ol>
-              <li>Teteo</li>
-              <li>Sam</li>
-              <li>Colt</li>
-              <li>Bryan</li>
-              <li>Kyler</li>
-              <li>Josh</li>
-              <li>Zach</li>
-              <li>Andrew</li>
-              <li>Jake</li>
-              <li>Jason</li>
-              <li>Ethan</li>
-              <li>Caleb</li>
-             </ol>
-      </div>
-  </main>
-{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Big Dawgs Power Rankings</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="nav.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <link rel="stylesheet" href="power.css">
+    </head>
+    <body>       
+        <nav class="nav">
+            <a href="news.html" class="nav__link">
+                <i class="material-icons">newspaper</i>
+                <span class="nav__text">NEWS</span>
+            </a>
+            <a href="power.html" class="nav__link nav__link--active">
+                <i class="material-icons">format_list_numbered</i>
+                <span class="nav__text">POWER</span>
+            </a>
+            <a href="versus.html" class="nav__link">
+                <i class="material-icons">sports_mma</i>
+                <span class="nav__text">VERSUS</span>
+            </a>
+            <a href="forum.html" class="nav__link">
+                <i class="material-icons">forum</i>
+                <span class="nav__text">FORUM</span>
+            </a>
+        </nav>
+        <header>
+            <h3>Commissioner Beard's </h3>
+            <img src="RANKINGS.jpeg" id="rankings">
+        </header>
+        <main>
+            <div class="rankings" id="week4">
+                <p>Week 4:</p>
+                   <ol>
+                    <li>Teteo- God squad is coming to your town, and they’re gonna fuck you up.</li><br>
+                    <li>Andrew(up)- Consistent production top to bottom. Like a well oiled fantasy machine. 
+                    </li><br>
+                    <li>Bryan(down)- A down week, but a bounce back is in order with a fresh new trade piece. </li><br>
+                    <li>Jake(down)- Both gods showed up. Unfortunately no one else did.
+                    </li><br>
+                    <li>Zack(up)- A decent showing amongst a down week for the league. But his depth has shined bright this week. </li><br>
+                    <li>Colt(up)- A solid comeback after last week’s loss. Colt needs to keep it up to stay with the upper tier of the league.</li><br>
+                    <li>Sam(down) - Adding insult to injury, Sam’s star Swift will be out of commission. Can he ride the backup to glory?</li><br>
+                    <li>Kyler- A low scoring contest for both teams is bad enough, but the spirit can break when you’ve lost to a team like Caleb’s. </li><br>
+                    <li>Ethan(up)- Fought through a running back injury game and came out clean. Khalil is now ride or die.</li><br>
+                    <li>Jason(down)- Cry now, cry later.
+                    </li><br>
+                    <li>Caleb- A moral and an actual victory. Big moves need to be made and fingers need to be crossed to keep the flame alive though. </li><br>
+                    <img src="mtndew.png" id="dew"><h2>SHITTER OF THE WEEK</h2><br>
+                    <li>Josh - Week 2 on the shit-list. I know it’s dark down here. I know it’s scary. Little to eat or drink. Constant attacks on your fantasy football acumen. But strengthen yourself. Let the pressure of the whole league standing on your head form you into a diamond. New week, new players, new opponent. What’s the worst that can happen? You’re already at rock bottom.</li><br>
+                    </ol> 
+            </div>
+            <div class="rankings" id="week3">
+                <p>Week 3:</p>
+                   <ol>
+                    <li>Teteo(up)- Teteo has crafted the dream squad. Take notes.</li><br>
+                    <li>Bryan(up)- Consistent excellence. He just gets the job done.</li><br>
+                    <li>Jake(up)- Coming back strong after a week one loss. Jake is building steam.</li><br>
+                    <li>Colt(down)- A week 2 disappointment, but Colt has tasted the good life. He’ll be wanting more.
+                    </li><br>
+                    <li>Andrew- Did what it took to get the victory. But he can’t expect to do the same against a contender.</li><br>
+                    <li>Sam(down)- Losing to the previous week’s shitlicker after a promising week one leads to a big demotion. *<br><br>*editors note, since the initial writing of the rankings Sam was able to barely win.</li><br>
+                    <li>Zack(up) - A middling week, but a win all the same. We will need to see some improvement moving forward.</li><br>
+                    <li>Kyler(down)- Disappointment after a string opening showing last week. Is there trouble in the house of the running back?</li><br>
+                    <li>Jason(up)- The ass shaking gifs are back. But Josh Jacobs is not, thank god.</li><br>
+                    <li>Ethan(up) - Any week under 100 is a massive blow to the ego and requires a hard look at the roster. Luckily for Ethan the league has no shortage of bottom dwellers to rise above.</li><br>
+                    <li>Caleb(up)- Crowned “Worst Roster in The League” by popular opinion, Caleb did little to prove doubters wrong. Fortunately for him he was able to pull himself from the septic tank this week fashioning another teams bloated corpse below him as a sort of human life raft…</li><br>
+                    <img src="mtndew.png" id="dew"><h2>SHITTER OF THE WEEK</h2><br>
+                    <li>Josh(down) - Really, really not great man. Two weeks in a row to open the new season with sub 90 point scoring. Not only that but doing so in the face of a true god-like opponent. Like if David and Goliath ended with Goliath using David’s skinned flesh as a doormat after shooting him in the face with a shotgun. I think the Bible would be cooler if that happened, but in this case Josh’s loss is pitiable. Get that trade machine up and running and be ready to lay down some fat FAAB stacks cuz this team needs a reset asap. </li><br>
+                    </ol> 
+            </div>
+            <div class="rankings" id="week2">
+                <p>Week 2:</p>
+                   <ol>
+                    <li>Sam(up)- Five QB interceptions and Two running back heroes equals WIN.</li><br>
+                    <li>Colt(up)- Usually by this point colt has renounced religion and all hope.</li><br>
+                    <li>Bryan(up)- A win is a win. Even if it's Caleb.</li><br>
+                    <li>Kyler(up)- Second highest scorer, fourth in power rankings. Possible conspiracy against this maverick owner?</li><br>
+                    <li>Andrew(up)- If this guy ever learns who to play off his bench we are all fucked.</li><br>
+                    <li>Jake(up)- Two gods, one L.</li><br>
+                    <li>Zack - Josh Allen can only do so much to try and save this self inflicted starter decision disaster.</li><br>
+                    <li>Ethan(up)- Not last!</li><br>
+                    <li>Teteo(down)- Teteo's first two picks may have been duds, but the entire Jets offense is ready to take this team to the next level.</li><br>
+                    <li>Jason - It's the Pitts.</li><br>
+                    <li>Josh(down)- Losing by one point is always a tragedy. Knowing that if you had started no one in the flex and you would have won? Enough to crush a man's soul.</li><br>
+                    <img src="mtndew.png" id="dew"><h2>SHITTER OF THE WEEK</h2><br>
+                    <li>Caleb - 9 players, not even 80 points. You'd better be thanking your lucky stars that the Browns so happily employ human scum because without Kareem Hunt we would have tossed the season away and just assigned you last place punishment in week 1. Najee dead, Etienne already usurped by James Robinson, Prescott fucked, CeeDee bust, Kittle made of glass. Only one option left. Jamaal Williams SZN. </li><br>
+                    </ol> 
+            </div>
+            <div class="rankings" id="week1">
+                <p>Week 1:</p>
+                   <ol>
+                    <li>Teteo</li>
+                    <li>Sam</li>
+                    <li>Colt</li>
+                    <li>Bryan</li>
+                    <li>Kyler</li>
+                    <li>Josh</li>
+                    <li>Zach</li>
+                    <li>Andrew</li>
+                    <li>Jake</li>
+                    <li>Jason</li>
+                    <li>Ethan</li>
+                    <li>Caleb</li>
+                   </ol> 
+            </div>
+        </main>
+    </body>
+</html>

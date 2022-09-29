@@ -1,48 +1,99 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Big Dawgs Versus</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="nav.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <link rel="stylesheet" href="versus.css">
+    </head>
+    <body>       
+        <nav class="nav">
+            <a href="news.html" class="nav__link">
+                <i class="material-icons">newspaper</i>
+                <span class="nav__text">NEWS</span>
+            </a>
+            <a href="power.html" class="nav__link">
+                <i class="material-icons">format_list_numbered</i>
+                <span class="nav__text">POWER</span>
+            </a>
+            <a href="versus.html" class="nav__link nav__link--active">
+                <i class="material-icons">sports_mma</i>
+                <span class="nav__text">VERSUS</span>
+            </a>
+            <a href="forum.html" class="nav__link">
+                <i class="material-icons">forum</i>
+                <span class="nav__text">FORUM</span>
+            </a>
+        </nav>
+        <header>
+            <h1>'Mish's 'Matchups</h1>  
+        </header>
+        <main>
+            <div class="news-post" id="news1">
+                
+                <p>
+                    Love, Hardship, Betrayal, Revenge, Justice.<br> These are the storylines you lust for and bust for.
+                </p>
+            </div>
+            <h2>Game of the Week</h2>
+            <div class="mandment-container">
+                <div class="mandments" id="musing2">
+                    <h3>Weekend at Dre's (W4)</h3>
+                    <p>
+                        Sam’s beautiful little baby boy Swift is down with injury, time for the backup to shine. Zack rides high after securing a win during a down week for the league. Two titans of the Fallen Angels clash.
+                        <img src="weekendatdeandres.jpg">
+                    </p>
+                   </div>
+                <div class="mandments" id="musing2">
+                    <h3>Mike Evanescence (W3)</h3>
+                    <p>
+                        The ultimate House hater vs the undisputed champion of The House. Time to settle this dispute. Zack catches a break with Mike Evans out, little does he know it will only serve to bring Bryan's team to life.
+                        <img src="bring me to life mike.png">
+                    </p>
+                   </div>
+                <div class="mandments" id="musing1pt1">
+                        <h3>ROCKY (W2)</h3>
+                        <p>
+                            He's been beaten, bruised up, and broken. Down but not out, Caleb is looking to rise from the ashes after a harrowing defeat. Coach has his work cut out for him against the highest scoring team from week 1. Will Najee rally to carry the lifeless corpse of Hurst so good :*).  Or are we in for a legendary Barkley beatdown.<br> 
+                        <img src="https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2018%2F0621%2Fr389700_1296x729_16%2D9.jpg&w=1140&cquality=40&format=jpg">
+                        </p>
+                    </div>
+               
+            </div>
+            <h2>Predictions</h2>
+            <div class="mandment-container">
+                <div class="mandments" id="matchup4">
+                    <h3>Week 4 Matchups</h3>
+                    <p>
+                        ZACK VS SAM (see game of the week) <br><br>Winner: Zack<br><br><br>
+                        KYLER VS BRYAN:<br><br>The arguably peak underperforming roster this season, helmed by the usually dependable Kyler, heads into week four against a slightly revamped squad headed by Bryan. A tight contest could develop if Kyler’s running back trio decides to show up.<br><br>Winner: Bryan<br><br><br>
+                        COLT VS CALEB:<br><br>A house divided cannot stand. These two former roommates and current Idahoans  residents will be avoiding eye contact this whole week as they pass by each other on their beautiful Boise downtown. What a great city. <br><br>Winner: Colt<br><br><br>
+                        JOSH VS ETHAN:<br><br>A new look squad for Josh looks to climb out of the sludge shit pit he has been entombed in, Ethan and Khalil will be tasked with making sure the dead do not rise.<br><br>Winner: Ethan<br><br><br>
+                        TETEO VS JAKE:<br><br>THE team of the season thus far helmed by Teteo squares off against the Jake’s meme team. Has the Yeti truly awakened? How long will Jake be able to start Raheem Mostert before he is forced to pivot? Find out this week! 
+                        <br><br>Winner: Teteo<br><br><br>
+                        JASON VS ANDREW:<br><br>Jason has waited patiently for Pitts to produce and it paid off last week. A tough task lays ahead of him and his name is Andrew Weber. He owns a large stock of talented football players and he’s ready to unleash them all on top of Mr. Lange’s hopes and dreams. Will Ekeler arrive in time to save the day? 
 
-{% block content %}
-<header>
-      <h1>'Mish's 'Matchups</h1>
-  </header>
-  <main>
-      <div class="news-post" id="news1">
-
-          <p>
-              Love, Hardship, Betrayal, Revenge, Justice.<br> These are the storylines you lust for and bust for.
-          </p>
-      </div>
-      <h2>Game of the Week</h2>
-      <div class="mandment-container">
-          <div class="mandments" id="musing2">
-              <h3>Mike Evanescence (W3)</h3>
-              <p>
-                  The ultimate House hater vs the undisputed champion of The House. Time to settle this dispute. Zack catches a break with Mike Evans out, little does he know it will only serve to bring Bryan's team to life.
-                  <img src="../static/bring me to life mike.png">
-              </p>
-             </div>
-          <div class="mandments" id="musing1pt1">
-                  <h3>ROCKY (W2)</h3>
-                  <p>
-                      He's been beaten, bruised up, and broken. Down but not out, Caleb is looking to rise from the ashes after a harrowing defeat. Coach has his work cut out for him against the highest scoring team from week 1. Will Najee rally to carry the lifeless corpse of Hurst so good :*).  Or are we in for a legendary Barkley beatdown.<br>
-                  <img src="https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2018%2F0621%2Fr389700_1296x729_16%2D9.jpg&w=1140&cquality=40&format=jpg">
-                  </p>
-              </div>
-
-      </div>
-      <h2>Predictions</h2>
-      <div class="mandment-container">
-          <div class="mandments" id="mandment2">
-              <h3>Week 3 Matchups</h3>
-              <p>
-                  ZACK VS BRYAN (see game of the week) <br><br>Winner: Bryan<br><br><br>
-                  KYLER VS CALEB:<br><br>The perfect get right game for Kyler against the scarecrow that is Caleb’s fantasy squad. Caleb may have renounced his faith in god after this rough start, but maybe there’s someone a little more sinister that can aid him now…<br><br>Winner: Kyler<br><br><br>
-                  COLT VS SAM:<br><br>Pittman will be back for colt, but his quarterback won’t. We’ll see you on the waiver line. The tenacity of Sam’s fearsome running back duo will be needed after they were only at 50% strength in his squeezer of a win.<br><br>Winner: Sam<br><br><br>
-                  JAKE VS ETHAN:<br><br>Looking to add coal to the fire off the back of last week’s win, Jake will be happy to see the return of Gabe Davis and an upgrade for Julio if he is able to suit up. Ethan will be sending up a prayer that Davante and Chase will decide to show up.<br><br>Winner: Jake<br><br><br>
-                  TETEO VS JASON:<br><br>The Juggernaut has arrived and his name is Teteo. The full strength of this team may not be needed to topple Jason who stands teetering on the edge of this early season.<br><br>Winner: Teteo<br><br><br>
-                  JOSH VS ANDREW:<br><br>Andrew has assembled a lot of wins from the draft this year and comes into this contest with the highest projected point total on the week. Josh is just trying to hold on. This one could be over early.
-                  <br><br>Winner: Andrew<br><br><br>
-              </p>
-              </div>
-      </div><br>
-  </main>
-{% endblock %}
+                        <br><br>Winner: Andrew<br><br><br>
+                    </p>
+                    </div>
+                <div class="mandments" id="matchup3">
+                    <h3>Week 3 Matchups</h3>
+                    <p>
+                        ZACK VS BRYAN (see game of the week) <br><br>Winner: Bryan<br><br><br>
+                        KYLER VS CALEB:<br><br>The perfect get right game for Kyler against the scarecrow that is Caleb’s fantasy squad. Caleb may have renounced his faith in god after this rough start, but maybe there’s someone a little more sinister that can aid him now…<br><br>Winner: Kyler<br><br><br>
+                        COLT VS SAM:<br><br>Pittman will be back for colt, but his quarterback won’t. We’ll see you on the waiver line. The tenacity of Sam’s fearsome running back duo will be needed after they were only at 50% strength in his squeezer of a win.<br><br>Winner: Sam<br><br><br>
+                        JAKE VS ETHAN:<br><br>Looking to add coal to the fire off the back of last week’s win, Jake will be happy to see the return of Gabe Davis and an upgrade for Julio if he is able to suit up. Ethan will be sending up a prayer that Davante and Chase will decide to show up.<br><br>Winner: Jake<br><br><br>
+                        TETEO VS JASON:<br><br>The Juggernaut has arrived and his name is Teteo. The full strength of this team may not be needed to topple Jason who stands teetering on the edge of this early season.<br><br>Winner: Teteo<br><br><br>
+                        JOSH VS ANDREW:<br><br>Andrew has assembled a lot of wins from the draft this year and comes into this contest with the highest projected point total on the week. Josh is just trying to hold on. This one could be over early.
+                        <br><br>Winner: Andrew<br><br><br>
+                    </p>
+                    </div>
+            </div><br>
+        </main>
+    </body>
+</html>

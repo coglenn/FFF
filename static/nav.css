@@ -18,7 +18,7 @@ nav{
     background-color: black;
     color: rgb(20, 181, 53);
     box-shadow: 0 0 4px rgb(20, 181, 53);
-
+    
 }
 
 .nav__link{
@@ -47,3 +47,5 @@ nav{
     text-shadow: 2px 2px 4px rgb(185, 201, 34);
     background-color: #092205;
 }
+
+

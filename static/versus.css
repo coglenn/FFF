@@ -9,7 +9,7 @@ h1 {
 
 main h1 {
     margin-left: 10px;
-    text-shadow: 1px 1px 3px#f6ff00ac;
+    text-shadow: 1px 1px 3px#f6ff00ac; 
 }
 
 h4{
@@ -37,7 +37,7 @@ div {
     grid-auto-columns: 90%;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
-
+    
 
 }
 
@@ -45,7 +45,7 @@ div {
 
 .news-post p {
     padding-left: 15px;
-
+    
 }
 
 #mandment0 {
@@ -73,5 +73,5 @@ img {
 
 h2{
     margin-left: 20px;
-    text-shadow: 1px 1px 3px#f6ff00ac;
+    text-shadow: 1px 1px 3px#f6ff00ac; 
 }
