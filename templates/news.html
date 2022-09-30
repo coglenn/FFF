@@ -9,45 +9,45 @@
         <link rel="stylesheet" href="nav.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
-        <link rel="stylesheet" href="news.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='news.css')}}">
     </head>
-    <body>       
-        <nav class="nav">
-            <a href="news.html" class="nav__link nav__link--active">
-                <i class="material-icons">newspaper</i>
-                <span class="nav__text">NEWS</span>
-            </a>
-            <a href="power.html" class="nav__link">
-                <i class="material-icons">format_list_numbered</i>
-                <span class="nav__text">POWER</span>
-            </a>
-            <a href="versus.html" class="nav__link">
-                <i class="material-icons">sports_mma</i>
-                <span class="nav__text">VERSUS</span>
-            </a>
-            <a href="forum.html" class="nav__link">
-                <i class="material-icons">forum</i>
-                <span class="nav__text">FORUM</span>
-            </a>
-        </nav>
+    <body>
+      <nav class="nav">
+          <a href="{{ url_for('news') }}" class="nav__link nav__link--active">
+              <i class="material-icons">newspaper</i>
+              <span class="nav__text">NEWS</span>
+          </a>
+          <a href="{{ url_for('power') }}" class="nav__link">
+              <i class="material-icons">format_list_numbered</i>
+              <span class="nav__text">POWER</span>
+          </a>
+          <a href="{{ url_for('versus') }}" class="nav__link">
+              <i class="material-icons">sports_mma</i>
+              <span class="nav__text">VERSUS</span>
+          </a>
+          <a href="{{ url_for('forum') }}" class="nav__link">
+              <i class="material-icons">forum</i>
+              <span class="nav__text">FORUM</span>
+          </a>
+      </nav>
         <header>
             <h3>Welcome to,</h3>
             <h1>THE BIG DAWGS</h1>
         </header>
         <main>
             <div class="news-post" id="news1">
-                
+
                 <p>
                     The official "The Big Dawgs" fantasy football website.
                 </p>
             </div>
             <h1>'Mish's 'Mandments</h1>
-            <img src="moses.jpeg" id="moses" alt="">
+            <img src="../static/moses.jpeg" id="moses" alt="">
             <div class="mandment-container">
                 <div class="mandments" id="mandment3">
                     <h3>Third 'Mandment</h3>
                     <p>
-                        Money, money, money, money, money Some people got to have it Do things, Do things, do bad things with it Dollar bills, yall For that lean, mean, mean green Almighty dollar Talkin about money Give me a nickel, brother can you spare a dime Money can drive some people out of their minds Money, money, money, money, money<br><br>Not only do these words open every episode of The Apprentice hosted by the 45th president of the United States, they are also the thoughts rushing through each of our minds as we enter our weekly waiver bids. Maybe it’s just me, but I just can’t seem to figure out what the worth of a player is when we must assign a dollar value to them.  Especially so without much of a scale to weigh them against. Our league’s first year as a FAAB waiver system has been one filled with overpays that are often made to be the joke, but we should remember we are all in this learning process together. As we gain knowledge and learn how to accurately assess player worth and the individual monetary strategy of our league opponents, we will find less and less comedy in each other, and unlock a new part of this beautiful game we all love. 
+                        Money, money, money, money, money Some people got to have it Do things, Do things, do bad things with it Dollar bills, yall For that lean, mean, mean green Almighty dollar Talkin about money Give me a nickel, brother can you spare a dime Money can drive some people out of their minds Money, money, money, money, money<br><br>Not only do these words open every episode of The Apprentice hosted by the 45th president of the United States, they are also the thoughts rushing through each of our minds as we enter our weekly waiver bids. Maybe it’s just me, but I just can’t seem to figure out what the worth of a player is when we must assign a dollar value to them.  Especially so without much of a scale to weigh them against. Our league’s first year as a FAAB waiver system has been one filled with overpays that are often made to be the joke, but we should remember we are all in this learning process together. As we gain knowledge and learn how to accurately assess player worth and the individual monetary strategy of our league opponents, we will find less and less comedy in each other, and unlock a new part of this beautiful game we all love.
 
     <br><br>- commish, out
 
@@ -64,16 +64,16 @@
                 <div class="mandments" id="mandment1">
                 <h3>First 'Mandment</h3>
                 <p>
-                    The league rests in a murky landscape after the first week of games. What many of us had hoped would be a revealing series of contests to show us clarity in the destinies of our chosen gridiron warriors, could be nothing more than a mirage seen on the horizon. One that as soon as we reach out to grasp the assured realization of our drafts, dissipates as nothing more than an early season load bust. Players this time last year who exploded onto the scene showing what must surely be fantasy stardom often times fell off a steep cliff as soon as their fates returned to the mean, Icarus manifest. All this is to say that as much as some of your surprising, or not so surprising, fantasy studs and duds may have you ripping out your hair or screaming to the heavens in joy, prepare for a market correction in week 2. Be ready to react but not overreact, and most of all don’t not react. 
+                    The league rests in a murky landscape after the first week of games. What many of us had hoped would be a revealing series of contests to show us clarity in the destinies of our chosen gridiron warriors, could be nothing more than a mirage seen on the horizon. One that as soon as we reach out to grasp the assured realization of our drafts, dissipates as nothing more than an early season load bust. Players this time last year who exploded onto the scene showing what must surely be fantasy stardom often times fell off a steep cliff as soon as their fates returned to the mean, Icarus manifest. All this is to say that as much as some of your surprising, or not so surprising, fantasy studs and duds may have you ripping out your hair or screaming to the heavens in joy, prepare for a market correction in week 2. Be ready to react but not overreact, and most of all don’t not react.
 
 <br><br>- commish, out
-                <img src="mandment1.jpeg" class="mandment-img" alt="">
+                <img src="../static/mandment1.jpeg" class="mandment-img" alt="">
                 </p>
                 </div>
                 <div class="mandments" id="mandment0">
                     <h4>9/16/22: Fantasy Football Website Launch!</h4>
                     <p>
-                        Welcome to the official "The Big Dawgs" fantasy football website.  By using the bottom navigation bar you will be able to access: Up to date league news, weekly power rankings, league game previews, and communicate with your league-mates on the forum. 
+                        Welcome to the official "The Big Dawgs" fantasy football website.  By using the bottom navigation bar you will be able to access: Up to date league news, weekly power rankings, league game previews, and communicate with your league-mates on the forum.
                     </p>
                 </div>
             </div><br>
@@ -84,7 +84,7 @@
                     <p>
                         What’s in a name? Does the effort put into a team name have an effect on a fantasy roster’s performance? In my own career I’ve found that my own superstition of needing to change my team’s name is not only a superstition, but also a signal of my own weekly hands on approach to forming a hopeful championship squad. While sifting through the waiver offerings and formulating trade offers I find it hard not to freshen up the team moniker to reflect my new weekly feeling. Does this mean that a team with a consistent name should expect to perform worse? No! We have only to look towards our own set and forget champion from last year Football Sucks. Now it could be argued that in some ways the stagnant title reflected a squad consisting of 2021 game-breakers Cooper Kupp and Derrick Henry. But I think it just goes to show that there are many paths to victory, just as there are many paths to a great team name.
                     </p>
-                    <img src="gimp nut.png" class="mandment-img" alt="">
+                    <img src="../static/gimp nut.png" class="mandment-img" alt="">
                    </div>
                 <div class="mandments" id="musing2">
                     <h3>Shower thoughts of an unwashed football fan</h3>
