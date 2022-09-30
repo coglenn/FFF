@@ -163,7 +163,8 @@ def delete(id):
 # New functions
 @app.route("/news/")
 def news():
-    return render_template("news.html")
+    top = league.top_scored_week()
+    return render_template("news.html", top = top)
 
 @app.route("/power/")
 def power():
@@ -204,21 +205,28 @@ def tests():
     # data = json.loads(soup)
     # teams_data = data.get('teams')
     top = league.top_scored_week()
+    top = str(top)
+    clean_top1 = top.lstrip('(Team')
+    clean_top2 = clean_top1.rstrip(')')
     bottom = league.least_scored_week()
     teams_list = []
     clean_teams_list = []
+    pos = []
     teams_data = league.standings()
+    x = 0
     for team in teams_data:
         teams_list.append(team)
     for item in teams_list:
+        x += 1
         item = str(item)
         clean_team1 = item.lstrip('Team')
         clean_team2 = clean_team1.lstrip('(')
         clean_team = clean_team2.rstrip(')')
+        pos.append(x)
         clean_teams_list.append(clean_team)
-
+    print(clean_teams_list)
     return render_template("tests.html",
-        results = clean_teams_list, top = top, bottom = bottom)
+        results = clean_teams_list, clean_top2 = clean_top2, bottom = bottom, pos = pos)
 
 print(league.standings())
 

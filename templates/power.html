@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='nav.css')}}" />
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,37 +11,37 @@
         <link rel="stylesheet" href="nav.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
-        <link rel="stylesheet" href="power.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='power.css')}}">
     </head>
-    <body>       
-        <nav class="nav">
-            <a href="news.html" class="nav__link">
-                <i class="material-icons">newspaper</i>
-                <span class="nav__text">NEWS</span>
-            </a>
-            <a href="power.html" class="nav__link nav__link--active">
-                <i class="material-icons">format_list_numbered</i>
-                <span class="nav__text">POWER</span>
-            </a>
-            <a href="versus.html" class="nav__link">
-                <i class="material-icons">sports_mma</i>
-                <span class="nav__text">VERSUS</span>
-            </a>
-            <a href="forum.html" class="nav__link">
-                <i class="material-icons">forum</i>
-                <span class="nav__text">FORUM</span>
-            </a>
-        </nav>
+    <body>
+      <nav class="nav">
+          <a href="{{ url_for('news') }}" class="nav__link">
+              <i class="material-icons">newspaper</i>
+              <span class="nav__text">NEWS</span>
+          </a>
+          <a href="{{ url_for('power') }}" class="nav__link nav__link--active">
+              <i class="material-icons">format_list_numbered</i>
+              <span class="nav__text">POWER</span>
+          </a>
+          <a href="{{ url_for('versus') }}" class="nav__link">
+              <i class="material-icons">sports_mma</i>
+              <span class="nav__text">VERSUS</span>
+          </a>
+          <a href="{{ url_for('forum') }}" class="nav__link">
+              <i class="material-icons">forum</i>
+              <span class="nav__text">FORUM</span>
+          </a>
+      </nav>
         <header>
             <h3>Commissioner Beard's </h3>
-            <img src="RANKINGS.jpeg" id="rankings">
+            <img src="../static/RANKINGS.jpeg" id="rankings">
         </header>
         <main>
             <div class="rankings" id="week4">
                 <p>Week 4:</p>
                    <ol>
                     <li>Teteo- God squad is coming to your town, and they’re gonna fuck you up.</li><br>
-                    <li>Andrew(up)- Consistent production top to bottom. Like a well oiled fantasy machine. 
+                    <li>Andrew(up)- Consistent production top to bottom. Like a well oiled fantasy machine.
                     </li><br>
                     <li>Bryan(down)- A down week, but a bounce back is in order with a fresh new trade piece. </li><br>
                     <li>Jake(down)- Both gods showed up. Unfortunately no one else did.
@@ -54,7 +56,7 @@
                     <li>Caleb- A moral and an actual victory. Big moves need to be made and fingers need to be crossed to keep the flame alive though. </li><br>
                     <img src="mtndew.png" id="dew"><h2>SHITTER OF THE WEEK</h2><br>
                     <li>Josh - Week 2 on the shit-list. I know it’s dark down here. I know it’s scary. Little to eat or drink. Constant attacks on your fantasy football acumen. But strengthen yourself. Let the pressure of the whole league standing on your head form you into a diamond. New week, new players, new opponent. What’s the worst that can happen? You’re already at rock bottom.</li><br>
-                    </ol> 
+                    </ol>
             </div>
             <div class="rankings" id="week3">
                 <p>Week 3:</p>
@@ -73,7 +75,7 @@
                     <li>Caleb(up)- Crowned “Worst Roster in The League” by popular opinion, Caleb did little to prove doubters wrong. Fortunately for him he was able to pull himself from the septic tank this week fashioning another teams bloated corpse below him as a sort of human life raft…</li><br>
                     <img src="mtndew.png" id="dew"><h2>SHITTER OF THE WEEK</h2><br>
                     <li>Josh(down) - Really, really not great man. Two weeks in a row to open the new season with sub 90 point scoring. Not only that but doing so in the face of a true god-like opponent. Like if David and Goliath ended with Goliath using David’s skinned flesh as a doormat after shooting him in the face with a shotgun. I think the Bible would be cooler if that happened, but in this case Josh’s loss is pitiable. Get that trade machine up and running and be ready to lay down some fat FAAB stacks cuz this team needs a reset asap. </li><br>
-                    </ol> 
+                    </ol>
             </div>
             <div class="rankings" id="week2">
                 <p>Week 2:</p>
@@ -91,7 +93,7 @@
                     <li>Josh(down)- Losing by one point is always a tragedy. Knowing that if you had started no one in the flex and you would have won? Enough to crush a man's soul.</li><br>
                     <img src="mtndew.png" id="dew"><h2>SHITTER OF THE WEEK</h2><br>
                     <li>Caleb - 9 players, not even 80 points. You'd better be thanking your lucky stars that the Browns so happily employ human scum because without Kareem Hunt we would have tossed the season away and just assigned you last place punishment in week 1. Najee dead, Etienne already usurped by James Robinson, Prescott fucked, CeeDee bust, Kittle made of glass. Only one option left. Jamaal Williams SZN. </li><br>
-                    </ol> 
+                    </ol>
             </div>
             <div class="rankings" id="week1">
                 <p>Week 1:</p>
@@ -108,7 +110,7 @@
                     <li>Jason</li>
                     <li>Ethan</li>
                     <li>Caleb</li>
-                   </ol> 
+                   </ol>
             </div>
         </main>
     </body>
