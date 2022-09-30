@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='nav.css')}}" />
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>The Big Dawgs Portal</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
     </head>
     <body>
         <div class="container">
             <div class="typed-out1">Wake Up, Jabroni...
             </div><br>
-        
+
         <div class="typed-out2">The Big Dawgs have you...
             </div><br>
-        
+
         <div class="typed-out3">Follow the white rabbit...
             </div><br>
-        
+
         <div class="typed-out4">Knock, Knock...
             </div><br>
         </div>
