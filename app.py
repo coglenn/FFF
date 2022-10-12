@@ -224,9 +224,11 @@ def tests():
         clean_team = clean_team2.rstrip(')')
         pos.append(x)
         clean_teams_list.append(clean_team)
-    print(clean_teams_list)
+    zipped = zip(pos, clean_teams_list)
+    list = list(zipped)
+    print(list)
     return render_template("tests.html",
-        results = clean_teams_list, clean_top2 = clean_top2, bottom = bottom, pos = pos)
+        results = clean_teams_list, clean_top2 = clean_top2, bottom = bottom)
 
 print(league.standings())
 
