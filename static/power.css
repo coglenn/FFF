@@ -15,6 +15,8 @@ div.rankings {
     box-shadow: 1px 1px 5px#f6ff00;
 }
 
+
+
 #dew{
     max-width: 30vw;
     display: block;
@@ -28,4 +30,11 @@ div.rankings {
     margin: auto;
     box-shadow: 1px 1px 5px#f6ff00, -1px -1px 5px#9dff00;
     border-radius: 10px;
+}
+
+#dog{
+    max-width:100%;
+    padding-top: 10px;
+    margin: none;
+
 }
